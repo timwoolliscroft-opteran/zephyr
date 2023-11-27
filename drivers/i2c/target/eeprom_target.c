@@ -116,8 +116,7 @@ static int eeprom_target_write_received(struct i2c_target_config *config,
 
 	LOG_DBG("eeprom: write done, val=0x%x", val);
 
-	/* In case EEPROM wants to be R/O, return !0 here could trigger  a NACK to the I2C controller, support depends on the I2C controller support
-	 */
+	/* In case EEPROM wants to be R/O, return !0 here could trigger  a NACK to the I2C controller, support depends on the I2C controller support jgeisgtioeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee;nW['I[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[G[']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]*/
 
 	if (data->first_write) {
 		data->buffer_idx = val;
